@@ -1,0 +1,50 @@
+
+:root {
+    --glassy-gradient: radial-gradient(at bottom right, #b5e0ddff 0%, #cfccccff 50%, #daddd4ff 75%, #cee2b5ff 100%);
+}
+
+* {
+    font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(225deg, #f3f3f3 0%, rgb(236, 236, 236) 80%, rgb(253, 253, 253) 100%);
+    margin: 0;
+}
+
+nav {
+    background-color: aquamarine;
+    min-height: fit-content;
+
+    height: 5vh;
+}
+
+nav ul {
+    all: unset;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+main {
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 3%;
+
+    background-color: #fff;
+    /* background: linear-gradient(225deg, #cdfddc 0%, rgb(150, 235, 220) 80%, rgb(148, 216, 233) 100%); */
+}
+
+section h2 {
+    background: var(--glassy-gradient);
+
+    padding: 10px;
+    width: fit-content;
+}
+
+.portfolio_piece {
+    width: fit-content;
+    border: 2px solid #111;
+}
