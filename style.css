@@ -1,25 +1,32 @@
 
+/* ---Document Wide Styling--- */
 :root {
     --glassy-gradient: radial-gradient(at bottom right, #b5e0ddff 0%, #cfccccff 50%, #daddd4ff 75%, #cee2b5ff 100%);
+    --banana-gradient: linear-gradient(210deg, #fdfa23 0%, rgb(217, 255, 0) 60%, rgb(200, 255, 0) 100%);
+    --dark-gray: #2c2c2c;
+
+    --standard-box-shadow: 0px 4px 8px 0px #85858567;
 }
 
 * {
+    color: var(--dark-gray);
     font-family: 'Quicksand', Helvetica, Arial, sans-serif;
 }
 
 body {
-    background: linear-gradient(225deg, #f3f3f3 0%, rgb(236, 236, 236) 80%, rgb(253, 253, 253) 100%);
+    background: var(--glassy-gradient);
     margin: 0;
 }
 
+/* ---Navigation Menu Styling - Includes links to sections within the webpage--- */
 nav {
-    background-color: aquamarine;
     min-height: fit-content;
-
     height: 5vh;
+    padding: 4px;
 }
 
 nav ul {
+    margin: 0 auto;
     all: unset;
 }
 
@@ -27,24 +34,97 @@ nav ul li {
     display: inline-block;
 }
 
+nav ul li a {
+    font-size: large;
+
+    padding: 10px;
+    background: #fff;
+    font-weight: bold;
+}
+
+/* ---Header Styling--- */
+header {
+    background-color: var(--dark-gray);
+    padding: 20px;
+    box-shadow: var(--standard-box-shadow);
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+}
+
 main {
     width: 80%;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 3%;
+    padding: 1% 3%;
 
+    box-shadow: var(--standard-box-shadow);
     background-color: #fff;
-    /* background: linear-gradient(225deg, #cdfddc 0%, rgb(150, 235, 220) 80%, rgb(148, 216, 233) 100%); */
+}
+
+em {
+    background: var(--banana-gradient);
+    font-style: normal;
+}
+
+/* ---General Section Styling - includes About Me, Previous Work, and Contact-- */
+section {
+    background-color: #fff;
 }
 
 section h2 {
     background: var(--glassy-gradient);
 
+    margin: 0 0 10px 0;
     padding: 10px;
     width: fit-content;
 }
 
-.portfolio_piece {
-    width: fit-content;
-    border: 2px solid #111;
+img {
+    width: 500px;
 }
+
+/* About Me Section Styling */
+section#about_me img {
+    display: inline;
+    border-radius: 50%;
+}
+
+section#about_me p {
+    text-align: justify;
+}
+
+/* Previous Work Section Styling */
+.portfolio_piece {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    flex: 1 0 40%;
+    width: fit-content;
+
+    background-color: #fff;
+    border: 2px solid var(--dark-gray);
+}
+
+.portfolio_piece#first_work {
+    flex: 2 1 80%;
+}
+
+/* Contact Section Styling */
+/*  ****************
+ *  NOTHING HERE YET
+ */
+
+footer {
+    padding: 30px;
+    text-align: center;
+}
+
+/* Mobile (phone, tablet) Styling */
+/*  ****************
+ *  NOTHING HERE YET
+ */
