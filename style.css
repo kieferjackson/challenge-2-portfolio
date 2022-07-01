@@ -27,8 +27,6 @@ h1, h2, h3 {
 nav {
     padding: 10px 10%;
     display: flex;
-    /* min-height: fit-content; */
-    /* height: 8vh; */
     justify-content: right;
 }
 
@@ -105,12 +103,10 @@ section#previous_work {
     flex-wrap: wrap;
 }
 
-/**********Problem Code**********/
 section#previous_work h2 {
     display: block;
     flex-wrap: nowrap;
 }
-/**********Problem Code**********/
 
 .portfolio_piece {
     display: flex;
@@ -138,7 +134,6 @@ section#previous_work h2 {
 .portfolio_piece img:hover {
     filter:blur(0px);
     box-shadow: var(--standard-box-shadow);
-    /* transform: scale(1.005); */
 }
 
 .portfolio_piece h3 {
@@ -175,8 +170,26 @@ footer {
 
 /* ---Mobile (phone, tablet) Styling--- */
 @media screen and (max-width: 768px) {
+    nav {
+        /* padding: 10px 10%; */
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: flex;
+        align-items: center;
+        flex: 1 0 25%;
+
+        margin: 1%;
+        padding-bottom: 0;
+    }
+
+
     header {
-        width: 100%;
+        min-width: fit-content;
     }
 
     main {
@@ -196,7 +209,19 @@ footer {
         width: 300px;
     }
 
-    #contact section{
+    #contact section {
+        display: block;
         padding: 10px;
+    }
+
+    #contact section > div {
+        display: block;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .contact_info {
+        margin-bottom: 1vh;
+        /* margin-left: 25%; */
     }
 }
