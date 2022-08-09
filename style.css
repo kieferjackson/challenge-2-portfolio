@@ -145,11 +145,9 @@ section#previous_work h2 {
     padding: 10px;
 }
 
-/**********Comment this out**********/
 .portfolio_piece#first_work {
     flex: 2 1 100%;
 }
-/**********Comment this out**********/
 
 .portfolio_piece#first_work img {
     width: 500px;
